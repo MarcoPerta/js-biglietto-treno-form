@@ -1,14 +1,15 @@
-body{
-    width: 100vw;
-    height:100vh;
-}
 
 .bg-pink{
     background-color: #B91450;
 }
 
+.col-pink{
+    color: #B91450 !important;
+}
+
 .form-control, .form-select{
     width: initial !important;
+    border-color: #B91450 !important;
 }
 
 form > div {

@@ -10,21 +10,21 @@
 </head>
 <body class="bg-pink">
 
-    <div class="container text-center">
-      <h2 class="text-white my-2">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
-      <div class="white-container">
-        <div class="d-flex">
-            <form class="justify-content-between">
+    <div class="container">
+      <h2 class="text-white text-center my-2">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+      <div class="white-container p-5">
+        <div>
+            <form class="d-flex justify-content-between">
                 <div class="mb-3">
-                    <label for="NameAndSurname" class="form-label">Name and Surname</label>
+                    <label for="NameAndSurname" class="form-label col-pink">Name and Surname</label>
                     <input type="NameSurname" id="NameAndSurname"  class="form-control" aria-describedby="nameHelp">
                 </div>
                 <div class="mb-3">
-                    <label for="Kilometers" class="form-label">Km to do</label>
+                    <label for="Kilometers" class="form-label col-pink">Km to do</label>
                     <input type="NameSurname" id="HowmanyKm"  class="form-control" aria-describedby="KmHelp">
                 </div>
                 <div class="mb-3">
-                    <label for="Age" class="form-label">Age Range</label>
+                    <label for="Age" class="form-label col-pink">Age Range</label>
                     <select class="form-select" aria-label="select" id="Age">
                     <option selected>How old are you?</option>
                         <option value="1">18-64</option>
@@ -34,18 +34,44 @@
                 </div>    
             </form>
         </div>
-        <div>
-            <button onclick="MakeTheTicket();return false" type="submit" class="btn btn-primary my-2">Submit</button>
-            <button onclick="CancelTheTicket();return false" type="submit" class="btn btn-primary my-2">Cancel</button>
+        <div class="my-3 text-center">
+            <button onclick="MakeTheTicket();return false" type="submit" class="btn btn btn-secondary my-2 col-pink">Submit</button>
+            <button onclick="CancelTheTicket();return false" type="submit" class="btn btn btn-secondary my-2 col-pink">Cancel</button>
         </div>
         
-      </div>  
+      </div>
+      
+      <h2 class="text-white text-center my-2">IL TUO BIGLIETTO</h2>
+      <div class="white-container">
+        <h5 class="text-start">DETTAGLIO PASSEGGERI</h5>
+       <div class="d-flex justify-content-between">
+        <div class="bg-secondary d-inline-block">
+            <p>NOME PASSEGGERO</p>
+            <span id="NamePassenger"></span>
+        </div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Offer</th>
+                <th scope="col">Carriage</th>
+                <th scope="col">CP Code</th>
+                <th scope="col">Ticket Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Biglietto standard</td>
+                <td><span id="Carriage"></span></td>
+                <td><span id="CpCode"></span></td>
+                <td><span id="TicketPrice"></span></td>
+              </tr>
+            </tbody>
+        </table>  
+       </div> 
         
-          <span id="NamePassenger"></span>
-          <span id="Offer"></span>
-          <span id="Carriage"></span>
-          <span id="CpCode"></span>
-          <span id="TicketPrice"></span>
+      </div>
+        
+
     </div>
 
     <script type="text/javascript" src="main.js"></script>
