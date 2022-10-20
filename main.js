@@ -1,35 +1,72 @@
+let NameBuyer = document.getElementById('NameAndSurname')
+console.log(NameBuyer)
+
+let NamePassenger = document.getElementById('NamePassenger')
+
+let Km = document.getElementById('HowmanyKm')
+
+let Age = document.getElementById('Age')
+
+let carriage = Math.floor(Math.random()*50)+1;
+
+let Carriage = document.getElementById('Carriage')
+
+let cp = Math.floor(Math.random()*100000)+1;
+
+let CpCode = document.getElementById('CpCode')
 
 function MakeTheTicket(){
-    let NameBuyer = document.getElementById('NameAndSurname').value;
-    console.log(NameBuyer)
-    let Km = document.getElementById('HowmanyKm').value;
-    console.log(Km)
-    let Age = document.getElementById('Age').value;
-    console.log(Age)
-    let carriage = Math.floor(Math.random()*50)+1;
-    let cp = Math.floor(Math.random()*100000)+1;
+    let ValueNameBuyer = NameBuyer.value;
 
-    let priceKm = 0.21 * Km 
-    console.log(priceKm)
+    let ValueKm = Km.value;
+
+    let ValueAge = Age.value;
+    
+    let Valuecarriage = carriage.value;
+
+    let Valuecp = cp.value;
+
+    let priceKm = 0.21 * ValueKm 
+    
 
     if('2'){
         let discount = priceKm * 0.2
         priceKm = priceKm - discount 
-    console.log(priceKm)}
+    }
     else if('3'){
         let discount = priceKm * 0.4
         priceKm = priceKm - discount 
     }
-    console.log(priceKm)
+    
 
     priceKm = priceKm.toFixed(2)
 
-    document.getElementById('NamePassenger').innerHTML = `${NameBuyer}`
+    NamePassenger.innerHTML = `${ValueNameBuyer}`
 
-    document.getElementById('Carriage').innerHTML = `${carriage}
+    Carriage.innerHTML = `${Valuecarriage}
     `
-    
-    document.getElementById('CpCode').innerHTML = `${cp}`
+
+    CpCode.innerHTML = `${Valuecp}`
 
     document.getElementById('TicketPrice').innerHTML = `${priceKm} €`
+}
+
+function CancelTheTicket(){
+    
+    NameBuyer.value = '';
+    
+    NamePassenger.innerHTML = ''
+
+    carriage.value = '';
+
+    Carriage.innerHTML = ``
+
+    cp.value = '';
+
+    CpCode.innerHTML = ``
+
+    let priceKm = 0
+
+    document.getElementById('TicketPrice').innerHTML = `${priceKm} €`
+
 }
