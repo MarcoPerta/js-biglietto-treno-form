@@ -1,0 +1,20 @@
+body{
+    width: 100vw;
+    height:100vh;
+}
+
+.bg-pink{
+    background-color: #B91450;
+}
+
+.form-control, .form-select{
+    width: initial !important;
+}
+
+form > div {
+    display: inline-block;
+}
+
+.white-container{
+    background-color: white;
+}
