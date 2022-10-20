@@ -14,7 +14,7 @@
         <form>
             <div class="mb-3">
                 <label for="NameAndSurname" class="form-label">Name and Surname</label>
-                <input type="NameSurname" id="NameSurname"  class="form-control" aria-describedby="nameHelp">
+                <input type="NameSurname" id="NameAndSurname"  class="form-control" aria-describedby="nameHelp">
             </div>
             <div class="mb-3">
                 <label for="Kilometers" class="form-label">Km to do</label>
@@ -25,13 +25,17 @@
                 <option selected>How old are you?</option>
                     <option value="1">18-64</option>
                     <option value="2">Underage</option>
-                    <option value="2">65+</option>
+                    <option value="3">65+</option>
                 </select>
             </div>      
             <button onclick="MakeTheTicket();return false" type="submit" class="btn btn-primary my-2">Submit</button>
             <button onclick="CancelTheTicket();return false" type="submit" class="btn btn-primary my-2">Cancel</button>
         </form>
-          <h2 id="Price"></h2>
+          <span id="NamePassenger"></span>
+          <span id="Offer"></span>
+          <span id="Carriage"></span>
+          <span id="CpCode"></span>
+          <span id="TicketPrice"></span>
     </div>
 
     <script type="text/javascript" src="main.js"></script>
