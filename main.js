@@ -12,6 +12,7 @@ let carriage = Math.floor(Math.random()*50)+1;
 let Carriage = document.getElementById('Carriage')
 
 let cp = Math.floor(Math.random()*100000)+1;
+console.log(cp)
 
 let CpCode = document.getElementById('CpCode')
 
@@ -21,10 +22,6 @@ function MakeTheTicket(){
     let ValueKm = Km.value;
 
     let ValueAge = Age.value;
-    
-    let Valuecarriage = carriage.value;
-
-    let Valuecp = cp.value;
 
     let priceKm = 0.21 * ValueKm 
     
@@ -43,10 +40,9 @@ function MakeTheTicket(){
 
     NamePassenger.innerHTML = `${ValueNameBuyer}`
 
-    Carriage.innerHTML = `${Valuecarriage}
-    `
+    Carriage.innerHTML = `${carriage}`
 
-    CpCode.innerHTML = `${Valuecp}`
+    CpCode.innerHTML = `${cp}`
 
     document.getElementById('TicketPrice').innerHTML = `${priceKm} €`
 }
@@ -56,6 +52,10 @@ function CancelTheTicket(){
     NameBuyer.value = '';
     
     NamePassenger.innerHTML = ''
+
+    Age.value = '0';
+
+    Km.value = '';
 
     carriage.value = '';
 
