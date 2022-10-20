@@ -10,6 +10,30 @@
 </head>
 <body>
 
+    <div class="container">
+        <form>
+            <div class="mb-3">
+                <label for="NameAndSurname" class="form-label">Name and Surname</label>
+                <input type="NameSurname" id="NameSurname"  class="form-control" aria-describedby="nameHelp">
+            </div>
+            <div class="mb-3">
+                <label for="Kilometers" class="form-label">Km to do</label>
+                <input type="NameSurname" id="HowmanyKm"  class="form-control" aria-describedby="KmHelp">
+            </div>
+            <div class="mb-3">
+                <select class="form-select" aria-label="select" id="Age">
+                <option selected>How old are you?</option>
+                    <option value="1">18-64</option>
+                    <option value="2">Underage</option>
+                    <option value="2">65+</option>
+                </select>
+            </div>      
+            <button onclick="MakeTheTicket();return false" type="submit" class="btn btn-primary my-2">Submit</button>
+            <button onclick="CancelTheTicket();return false" type="submit" class="btn btn-primary my-2">Cancel</button>
+        </form>
+          <h2 id="Price"></h2>
+    </div>
+
     <script type="text/javascript" src="main.js"></script>
 </body>
 </html>
